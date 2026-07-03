@@ -22,6 +22,8 @@ h1,h2,h3{font-weight:800;line-height:1.1;}
 .btn-call{background:var(--card);color:var(--text);border:1px solid var(--border);}
 
 .site-header{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.5rem;border-bottom:1px solid var(--border);}
+.header-actions{display:flex;gap:.6rem;align-items:center;}
+.btn-install{background:var(--accent);color:#161513;border:none;font-family:inherit;}
 .brand{font-weight:900;font-size:1rem;letter-spacing:.05em;}
 .brand span{display:block;font-weight:400;font-size:.75rem;color:var(--muted);}
 
