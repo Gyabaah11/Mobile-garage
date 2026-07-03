@@ -29,6 +29,9 @@ form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const data = Object.fromEntries(new FormData(form).entries());
+  data.access_key = '872d69c1-e0ac-4e97-a8ca-3c570ab58c47';
+  data.subject = 'New Mobile Garage request';
+  data.from_name = 'Mobile Garage Website';
 
   submitBtn.disabled = true;
   submitBtn.textContent = 'Sending…';
@@ -36,9 +39,9 @@ form.addEventListener('submit', async (e) => {
   statusEl.className = 'form-status';
 
   try {
-    const res = await fetch('/.netlify/functions/send-sms', {
+    const res = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify(data),
     });
 
@@ -49,7 +52,7 @@ form.addEventListener('submit', async (e) => {
       statusEl.className = 'form-status success';
       form.reset();
     } else {
-      throw new Error(result.error || 'Failed to send');
+      throw new Error(result.message || 'Failed to send');
     }
   } catch (err) {
     statusEl.textContent = "Couldn't send automatically. Please call 055 417 8706 directly.";
