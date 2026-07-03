@@ -6,6 +6,12 @@
 <title>The Mobile Garage — We Come To You</title>
 <meta name="description" content="Vulcanizing, alignment, and auto mechanic service that comes to you. Call or WhatsApp 055 417 8706." />
 <meta name="theme-color" content="#161513" />
+<link rel="manifest" href="/manifest.json" />
+<link rel="icon" href="/icon-192.png" />
+<link rel="apple-touch-icon" href="/icon-192.png" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Mobile Garage" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -92,5 +98,12 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js').catch(() => {});
+    });
+  }
+</script>
 </body>
 </html>
