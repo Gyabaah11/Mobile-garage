@@ -36,7 +36,7 @@ form.addEventListener('submit', async (e) => {
   statusEl.className = 'form-status';
 
   try {
-    const res = await fetch('/.netlify/functions/send-whatsapp', {
+    const res = await fetch('/.netlify/functions/send-sms', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
