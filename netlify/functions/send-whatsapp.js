@@ -64,6 +64,8 @@ export async function handler(event) {
       };
     }
 
+    console.log('WhatsApp API success response:', JSON.stringify(data));
+
     return {
       statusCode: 200,
       body: JSON.stringify({ success: true }),
