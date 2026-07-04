@@ -22,21 +22,3 @@
     }
   ]
 }
-How to update it:
-
-Go to github.com/Gyabaah11/Mobile-garage/blob/main/manifest.json
-Click the pencil ✏️ to edit
-Replace "/" with "./" and remove the leading / from both icon src paths (as shown above)
-Commit to main
-
-While you're at it, it's worth fixing the same issue in sw.js — those /index.html, /styles.css etc. paths have the same problem, though that one's less critical since it's just for offline caching.
-Once you commit the manifest fix, wait ~1 minute for the rebuild, then reload the site fresh (hard refresh) and check if the Install button appears. Let me know what happens.so should i delete the old manifest.json and post the one aboveAdvocated editing existing file rather than replacing entirelyAdvocated editing existing file rather than replacing entirelyNo need to delete it — just edit the existing file and replace its contents. Deleting and recreating could mess with file history/paths for no benefit; editing in place is simpler and does exactly the same thing.
-Steps:
-
-Go to github.com/Gyabaah11/Mobile-garage/blob/main/manifest.json
-Click the pencil icon (✏️) at the top right of the file view to edit
-Select all the existing text in the editor (Ctrl+A) and delete it
-Paste in the corrected version I gave you above
-Scroll down and click "Commit changes" (commit directly to main)
-
-That's it — same file, same path, just updated content. Then wait about a minute for GitHub Pages to rebuild, do a hard refresh on your phone, and check if the Install button shows up.
