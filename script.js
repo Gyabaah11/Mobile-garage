@@ -85,4 +85,17 @@ if (installBtn) {
 window.addEventListener('appinstalled', () => {
   if (installBtn) installBtn.hidden = true;
   deferredPrompt = null;
-})
+})// --- iPhone install instructions ---
+const iosTip = document.getElementById('ios-install-tip');
+
+function isIos() {
+  return /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase());
+}
+
+function isInStandaloneMode() {
+  return ('standalone' in window.navigator) && window.navigator.standalone;
+}
+
+if (isIos() && !isInStandaloneMode() && iosTip) {
+  iosTip.hidden = false;
+}
