@@ -29,7 +29,7 @@ form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const data = Object.fromEntries(new FormData(form).entries());
-  data.access_key = '872d69c1-e0ac-4e97-a8ca-3c570ab58c47';
+  data.access_key = '6c0dc0b3-0d70-49ed-a18a-32c22f610540';
   data.subject = 'New Mobile Garage request';
   data.from_name = 'Mobile Garage Website';
 
