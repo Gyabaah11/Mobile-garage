@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+<title>The Mobile Garage — We Come To You</title>
+<meta name="description" content="Vulcanizing, alignment, and auto mechanic service that comes to you." />
+<meta name="theme-color" content="#0B5FFF" />
+
+<link rel="manifest" href="manifest.json" />
+<link rel="icon" href="icon-192.png" />
+<link rel="apple-touch-icon" href="icon-192.png" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Mobile Garage" />
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand">THE MOBILE<br>GARAGE<span>We come to you</span></div>
+  <div class="header-actions">
+    <button id="install-btn" class="btn btn-install" hidden>📲 Install App</button>
+    <p id="ios-install-tip" class="ios-tip" hidden>
+      📲 To install: tap <strong>Share</strong> then <strong>"Add to Home Screen"</strong>
+    </p>
+    <a class="btn btn-call" href="tel:+233554178706">📞 Call now</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#EAF2FF"/>
+          <stop offset="100%" stop-color="#0B5FFF"/>
+        </linearGradient>
+        <linearGradient id="vanBody" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#FFFDF7"/>
+          <stop offset="100%" stop-color="#F2EFE6"/>
+        </linearGradient>
+      </defs>
+
+      <rect width="900" height="460" fill="url(#skyGrad)"/>
+      <circle cx="770" cy="90" r="70" fill="#FFFFFF" opacity="0.6"/>
+      <g opacity="0.15" fill="#161513">
+        <circle cx="120" cy="70" r="40"/>
+        <circle cx="220" cy="50" r="26"/>
+        <circle cx="60" cy="140" r="22"/>
+      </g>
+
+      <rect x="0" y="380" width="900" height="80" fill="#2B2A28"/>
+      <rect x="0" y="378" width="900" height="6" fill="#F4F1EA"/>
+      <g fill="#F4F1EA">
+        <rect x="40" y="415" width="60" height="10" rx="5"/>
+        <rect x="160" y="415" width="60" height="10" rx="5"/>
+        <rect x="280" y="415" width="60" height="10" rx="5"/>
+        <rect x="400" y="415" width="60" height="10" rx="5"/>
+        <rect x="520" y="415" width="60" height="10" rx="5"/>
+        <rect x="640" y="415" width="60" height="10" rx="5"/>
+        <rect x="760" y="415" width="60" height="10" rx="5"/>
+      </g>
+
+      <!-- Service van -->
+      <g transform="translate(190,190)">
+        <ellipse cx="220" cy="188" rx="290" ry="18" fill="#161513" opacity="0.18"/>
+
+        <!-- van body -->
+        <path d="M10,150 L10,70 Q10,40 45,40 L300,40 Q330,40 345,65 L385,120 L430,130 L430,150 Z" fill="url(#vanBody)" stroke="#161513" stroke-width="4"/>
+        <!-- cab window -->
+        <path d="M300,50 L332,50 Q345,50 352,64 L372,100 L300,100 Z" fill="#8FD3E8" stroke="#161513" stroke-width="4"/>
+        <!-- side stripe -->
+        <rect x="20" y="112" width="360" height="26" fill="#0B5FFF"/>
+        <text x="200" y="131" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#FFFFFF">THE MOBILE GARAGE</text>
+
+        <!-- toolbox on roof -->
+        <rect x="60" y="24" width="90" height="20" rx="4" fill="#0B5FFF" stroke="#161513" stroke-width="3"/>
+
+        <!-- roof beacon -->
+        <rect x="150" y="10" width="26" height="14" rx="3" fill="#08348C" stroke="#161513" stroke-width="3"/>
+
+        <!-- door line -->
+        <line x1="230" y1="60" x2="230" y2="138" stroke="#161513" stroke-width="3"/>
+        <circle cx="222" cy="100" r="4" fill="#161513"/>
+
+        <!-- headlight -->
+        <circle cx="418" cy="140" r="9" fill="#FFEA9E" stroke="#161513" stroke-width="3"/>
+
+        <!-- wheels -->
+        <circle cx="90" cy="152" r="34" fill="#161513"/>
+        <circle cx="90" cy="152" r="14" fill="#F4F1EA"/>
+        <circle cx="340" cy="152" r="34" fill="#161513"/>
+        <circle cx="340" cy="152" r="14" fill="#F4F1EA"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="hero-copy">
+    <p class="eyebrow">ROADSIDE &amp; ON-SITE MECHANICAL SERVICE</p>
+    <h1>YOUR CAR<br>WON'T MOVE?<br>WE WILL.</h1>
+    <p>Vulcanizing, wheel alignment, and full auto mechanic work — done wherever your car is. Call, WhatsApp, or send your details and we'll come to you.</p>
+    <div class="hero-actions">
+      <a class="btn btn-call" href="tel:+233554178706">📞 Call 055 417 8706</a>
+      <a class="btn btn-outline" href="#book">Request a mechanic</a>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <h2>Every job, on-site</h2>
+  <div class="service-grid">
+    <div class="service"><span class="num">01</span><h3>Vulcanizing</h3><p>Tire puncture repair, patching, and replacement.</p></div>
+    <div class="service"><span class="num">02</span><h3>Wheel alignment</h3><p>Steering pulling or wear? We'll straighten it out.</p></div>
+    <div class="service"><span class="num">03</span><h3>Auto mechanic &amp; general repairs</h3><p>Engine, brakes, and everyday fixes.</p></div>
+    <div class="service"><span class="num">04</span><h3>Battery &amp; starting problems</h3><p>Jump-starts and battery replacement.</p></div>
+    <div class="service"><span class="num">05</span><h3>Emergency breakdown callout</h3><p>Stuck on the road? We'll come to you.</p></div>
+  </div>
+</section>
+
+<section class="how">
+  <p class="eyebrow">How it works</p>
+  <h2>Three steps to fixed</h2>
+  <div class="steps">
+    <div class="step"><span class="num">1</span><h3>Reach out</h3><p>Call, WhatsApp, or fill the form below.</p></div>
+    <div class="step"><span class="num">2</span><h3>We confirm</h3><p>You'll get a call back to confirm details.</p></div>
+    <div class="step"><span class="num">3</span><h3>We come to you</h3><p>The mechanic arrives at your location.</p></div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <p class="eyebrow">Request a mechanic</p>
+  <h2>Tell us what's wrong</h2>
+
+  <form id="request-form">
+    <label>Your name<input type="text" name="name" required /></label>
+    <label>Your phone number<input type="tel" name="phone" required /></label>
+    <label>Your location<input type="text" name="location" required /></label>
+    <label>Service needed
+      <select name="service" required>
+        <option value="">Select…</option>
+        <option>Vulcanizing</option>
+        <option>Alignment</option>
+        <option>Auto mechanic / general repair</option>
+        <option>Battery / starting problem</option>
+        <option>Emergency breakdown</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Describe the problem
+      <textarea name="message" rows="4"></textarea>
+    </label>
+
+    <button type="submit" id="submit-btn" class="btn btn-call btn-full">Send request</button>
+    <p id="form-status" class="form-status"></p>
+    <p class="fine-print">Sends straight to us — instant, no app needed.</p>
+  </form>
+</section>
+
+<section class="info">
+  <div><h4>Availability</h4><p>7 days a week</p></div>
+  <div><h4>Service type</h4><p>Fully mobile — we travel to you</p></div>
+  <div><h4>Contact</h4><p>055 417 8706</p></div>
+</section>
+
+<footer class="site-footer">
+  <h3>The Mobile Garage</h3>
+  <p>Vulcanizing · Alignment · Auto Mechanic · Mobile Service<br>Call or WhatsApp: 055 417 8706</p>
+  <div class="footer-actions">
+    <a class="btn btn-call" href="tel:+233554178706">📞 Call</a>
+    <a class="btn btn-outline" href="https://wa.me/233554178706">💬 WhatsApp</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

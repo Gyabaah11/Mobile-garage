@@ -1,0 +1,125 @@
+:root {
+  --blue: #0B5FFF;
+  --blue-dark: #08348C;
+  --sky: #EAF2FF;
+  --dark: #0F1B2D;
+  --card: #FFFFFF;
+  --text: #16233A;
+  --muted: #5B6B85;
+  --border: #D6E4FF;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #F5F9FF;
+  color: var(--text);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 { line-height: 1.1; }
+
+.eyebrow {
+  color: var(--blue);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-weight: 800;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.btn-call { background: var(--blue); color: #FFFFFF; }
+.btn-outline { background: transparent; color: var(--dark); border: 2px solid var(--dark); }
+.btn-install { background: #FFFFFF; color: var(--blue); border: 2px solid var(--blue); }
+.btn-full { width: 100%; text-align: center; }
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 24px;
+  background: var(--dark);
+}
+.brand { font-weight: 900; font-size: 1.4rem; text-transform: uppercase; color: #fff; }
+.brand span { display: block; font-weight: 400; font-size: 0.75rem; color: var(--blue); text-transform: none; }
+.header-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.ios-tip { font-size: 0.85rem; color: #AFC7FF; max-width: 220px; }
+
+/* Hero with vehicle illustration */
+.hero { position: relative; overflow: hidden; }
+.hero-art { position: absolute; inset: 0; z-index: 0; }
+.hero-art svg { width: 100%; height: 100%; display: block; object-fit: cover; }
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  padding: 70px 24px 260px;
+  max-width: 640px;
+}
+.hero-copy h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  color: var(--dark);
+}
+.hero-copy p { color: var(--dark); margin-bottom: 24px; max-width: 480px; font-weight: 600; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.services, .how, .book, .info { padding: 60px 24px; }
+.services { background: #FFFFFF; }
+.how { background: #F5F9FF; }
+.book { background: var(--dark); color: #fff; }
+.book .eyebrow { color: #6FA0FF; }
+.info { background: var(--blue); }
+
+.services h2, .how h2, .book h2 { font-size: 1.8rem; margin-bottom: 24px; }
+
+.service-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.service { background: var(--sky); padding: 20px; border-radius: 14px; border: 2px solid var(--border); }
+.service .num { color: var(--blue); font-weight: 900; }
+.service h3 { margin: 8px 0; }
+.service p { color: var(--muted); font-size: 0.95rem; }
+
+.steps { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.step .num { display: inline-block; background: var(--blue); color: #fff; width: 32px; height: 32px; border-radius: 50%; text-align: center; line-height: 32px; font-weight: 900; margin-bottom: 10px; }
+.step p { color: var(--muted); font-size: 0.95rem; }
+
+form { display: flex; flex-direction: column; gap: 16px; max-width: 480px; }
+label { display: flex; flex-direction: column; gap: 6px; font-size: 0.9rem; color: #AFC7FF; }
+input, select, textarea {
+  background: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  color: var(--text);
+  font-size: 1rem;
+  font-family: inherit;
+}
+.form-status { font-size: 0.9rem; min-height: 1.2em; }
+.form-status.success { color: #7FE3A0; }
+.form-status.error { color: #FF9B8C; }
+.fine-print { color: #7C8CA8; font-size: 0.8rem; }
+
+.info { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+.info h4 { color: #FFFFFF; margin-bottom: 6px; font-size: 0.9rem; }
+.info p { color: #E4EEFF; font-weight: 700; }
+
+.site-footer { padding: 40px 24px; background: var(--dark); color: #fff; }
+.site-footer p { color: #AFC7FF; margin: 12px 0 20px; }
+.footer-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+@media (max-width: 640px) {
+  .hero-copy { padding-bottom: 200px; }
+  .hero-copy h1 { font-size: 2.2rem; }
+}
