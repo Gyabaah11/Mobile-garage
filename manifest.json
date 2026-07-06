@@ -4,8 +4,8 @@
   "description": "Vulcanizing, alignment, and auto mechanic service that comes to you.",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#0B5FFF",
-  "theme_color": "#0B5FFF",
+  "background_color": "#FFC300",
+  "theme_color": "#FFC300",
   "orientation": "portrait",
   "icons": [
     {
