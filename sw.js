@@ -1,5 +1,5 @@
-const CACHE_NAME = 'mobile-garage-v1';
-const ASSETS = ['/', '/index.html', '/styles.css', '/script.js', '/icon-192.png', '/icon-512.png'];
+const CACHE_NAME = 'mobile-garage-v3';
+const ASSETS = ['./', 'index.html', 'styles.css', 'script.js', 'icon-192.png', 'icon-512.png'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -13,8 +13,6 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  // Network first for everything (so form/API calls always hit the network),
-  // falling back to cache only if offline.
   event.respondWith(
     fetch(event.request).catch(() => caches.match(event.request))
   );
