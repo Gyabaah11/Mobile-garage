@@ -60,11 +60,16 @@ h1, h2, h3, h4 { line-height: 1.1; }
 /* Hero with vehicle illustration */
 .hero { position: relative; overflow: hidden; }
 .hero-art { position: absolute; inset: 0; z-index: 0; }
-.hero-art svg { width: 100%; height: 100%; display: block; object-fit: cover; }
+.hero-art img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 30%; }
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,195,0,0.15) 0%, rgba(255,253,245,0.55) 55%, #FFFDF5 92%);
+}
 .hero-copy {
   position: relative;
   z-index: 1;
-  padding: 70px 24px 260px;
+  padding: 70px 24px 320px;
   max-width: 640px;
 }
 .hero-copy h1 {
@@ -72,8 +77,23 @@ h1, h2, h3, h4 { line-height: 1.1; }
   text-transform: uppercase;
   margin-bottom: 18px;
   color: var(--black);
+  background: rgba(255,195,0,0.9);
+  display: inline;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding: 2px 10px;
+  line-height: 1.3;
 }
-.hero-copy p { color: var(--black); margin-bottom: 24px; max-width: 480px; font-weight: 700; }
+.hero-copy p {
+  color: var(--black);
+  margin-bottom: 24px;
+  max-width: 480px;
+  font-weight: 700;
+  background: rgba(255,253,245,0.85);
+  padding: 10px 14px;
+  border-radius: 8px;
+  display: inline-block;
+}
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
 .services, .how, .book, .info { padding: 60px 24px; }
